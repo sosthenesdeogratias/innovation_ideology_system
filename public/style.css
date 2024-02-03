@@ -1,0 +1,42 @@
+/* public/style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    margin: 100px;
+    text-align: center;
+  }
+  
+  /* Add more general styles as needed */
+/* public/projects.css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+/* Add more project-specific styles as needed */
+  

@@ -1,0 +1,31 @@
+/* public/innovation.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .innovation {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .innovation h2 {
+    color: #3498db;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db;
+  }
+  

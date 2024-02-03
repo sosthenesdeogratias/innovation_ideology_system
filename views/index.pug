@@ -1,0 +1,123 @@
+// index.pug
+doctype html
+html
+  head
+    title Innovation System
+    link(rel='stylesheet', href='/style.css')
+    style.
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        text-align: left; /* Align text to the left */
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .left-side {
+        flex: 2; /* Take up more space on the left */
+        padding-right: 10px; /* Add some padding to separate text and image */
+      }
+
+      .right-side {
+        flex: 1; /* Take up less space on the right */
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      p {
+        color: #555;
+        margin: 20px 0;
+        padding: 10px;
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%; /* Make sure the image takes up the available width */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #3498db;
+        transition: background-color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #2980b9;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      header h1 {
+        color: #fff;
+        margin: 0;
+        text-align: center;
+      }
+
+      header div {
+        display: flex;
+        align-items: center;
+      }
+
+      header a {
+        color: #fff;
+        margin: 0 10px;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+    // Header section
+    header
+      div
+        a(href="/") IIS
+      div
+        a(href='/projects') Add Project
+        a(href='/innovations') Innovations
+        a(href='/users') Users
+        //a(href='/about') About
+
+    // Body section
+    .left-side
+      h1 Welcome to the Innovation System
+      p
+        | Explore and innovate with our platform. Click the links below to get started.
+      p
+        a(href='/projects') View Projects
+        a(href='/innovations') View Innovations
+        a(href='/users') View Users
+
+    // Right side with image
+    .right-side
+      img(src='/imge.png', alt='Innovation Image')
+
+    // Footer section
+    footer
+      p © 2024 Innovation System. All rights reserved.

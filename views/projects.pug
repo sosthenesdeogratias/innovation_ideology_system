@@ -1,0 +1,62 @@
+// projects.pug
+doctype html
+html
+  head
+    title Projects - Innovation System
+    link(rel='stylesheet', href='/projects.css')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js') // Include jQuery (if not already included)
+
+    script.
+      $(document).ready(function() {
+        // Toggle visibility of the "Add Project" form
+        $('#addProjectButton').click(function() {
+          $('#addProjectForm').toggle();
+        });
+      });
+  body
+    // Header section
+    header
+      div
+        a(href="/") IIS
+      div
+        a(href='/projects') Add Project
+        a(href='/innovations') Innovations
+        a(href='/users') Users
+        //a(href='/about') About
+    h1 Projects
+    // Display existing projects
+    each project in projects
+      div.project
+        h2= project.Title
+        p= project.Description
+        p Started: #{project.StartDate} - Ended: #{project.EndDate}
+        p Created By: #{project.CreatedBy}
+
+    // Button to toggle the add project form
+    button#addProjectButton(type='button') Add Project
+
+    // Form to add a new project (hidden by default)
+    form#addProjectForm(action='/insert/project' method='POST' style='display:none;')
+      label(for='title') Project Title:
+      input(type='text' name='title' required)
+      br
+
+      label(for='description') Project Description:
+      textarea(name='description' required)
+      br
+
+      label(for='startDate') Start Date:
+      input(type='date' name='startDate' required)
+      br
+
+      label(for='endDate') End Date:
+      input(type='date' name='endDate' required)
+      br
+
+      label(for='createdBy') Created By:
+      input(type='text' name='createdBy' required)
+      br
+
+      button(type='submit') Add Project
+  
+      p © 2024 Innovation System. All rights reserved.

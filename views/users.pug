@@ -1,0 +1,88 @@
+// users.pug
+doctype html
+html
+  head
+    title Users - Innovation System
+    link(rel='stylesheet', href='/users.css')
+    style.
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 50px;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #3498db;
+        transition: background-color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #2980b9;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      header h1 {
+        color: #fff;
+        margin: 0;
+      }
+
+      header a {
+        color: #fff;
+        margin: 0 10px;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+  body
+    // Header section
+    header
+      div
+        a(href="/") IIS
+      div
+        a(href='/projects') Add Project
+        a(href='/innovations') Innovations
+        a(href='/users') Users
+        //a(href='/about') About
+
+    h1 Users
+    // Display user data
+    each user in users
+      div.user
+        h2= user.FirstName + ' ' + user.LastName
+        p Email: #{user.Email}
+
+    // Link back to index.pug
+    a(href='/') Back to Home
+
+    footer
+      p © 2024 Innovation System. All rights reserved.

@@ -1,0 +1,30 @@
+/* public/users.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .user {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .user h2 {
+    color: #3498db;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db;
+  }
+  
